@@ -195,12 +195,7 @@ const Dropdown = ({ default_option, onChange, option_list, is_high_nav }) => {
         <>
             <Container ref={dropdown_ref}>
                 <Display onClick={toggleVisibility}>
-                    <QueryImage
-                        width="24px"
-                        height="24px"
-                        data={data[default_abbreviation]}
-                        alt={default_option.short_name}
-                    />
+                    <QueryImage width="24px" height="24px" data={data[default_abbreviation]} />
                     <ResponsiveText color="white" ml="0.8rem" weight="bold" mr="0.4rem">
                         {default_option.short_name}
                     </ResponsiveText>
