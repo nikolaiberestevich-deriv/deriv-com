@@ -33,10 +33,7 @@ const StyledContainer = styled(CareerContainer)`
 `
 
 const StyledHeader = styled(Header)`
-    font-size: 64px;
-    margin-bottom: 16px;
     color: var(--color-white);
-    text-align: center;
     line-height: 80px;
 `
 const SecondStyledHeader = styled(Header)`
@@ -44,14 +41,16 @@ const SecondStyledHeader = styled(Header)`
         margin-bottom: 40px;
     }
 
-    margin-bottom: 0 24px;
+    margin-bottom: 24px;
 `
 const StyledLinkButton = styled(LinkButton)`
+    margin-top: 40px;
     font-size: 20px;
     line-height: 30px;
     @media ${device.tablet} {
         font-size: 18px;
         max-width: 317px;
+        margin-top: 24px;
     }
     @media (max-width: 340px) {
         font-size: 15px;
@@ -66,7 +65,9 @@ const Hero = ({ display_name, img_data }: HeroProps) => {
     return (
         <StyledBackground data={img_data} alt={display_name}>
             <StyledContainer>
-                <StyledHeader as="h1">{display_name}</StyledHeader>
+                <StyledHeader align="center" size="64px" as="h1" height="80px">
+                    {display_name}
+                </StyledHeader>
                 <StyledLinkButton
                     has_no_end_slash
                     secondary="true"
@@ -92,6 +93,7 @@ Hero.propTypes = {
 const FirstSection = styled(SectionContainer)`
     max-width: 996px;
     width: 100%;
+    padding: 80px 0 72px;
     margin: 0 auto;
 
     @media ${device.laptop} {
@@ -104,6 +106,9 @@ const FirstSection = styled(SectionContainer)`
         margin-bottom: 40px;
         @media ${device.tablet} {
             margin-bottom: 0;
+        }
+        @media ${device.tabletS} {
+            font-size: 28px;
         }
         @media (max-width: 350px) {
             font-size: 26px;
@@ -135,9 +140,14 @@ const FirstSection = styled(SectionContainer)`
     }
 `
 const SecondSection = styled(SectionContainer)`
-    padding: 0 0 80px;
+    padding: 0 0 72px;
     max-width: 996px;
     margin: 0 auto;
+    ${Header} {
+        @media ${device.tabletS} {
+            font-size: 28px;
+        }
+    }
     @media ${device.laptop} {
         width: unset;
         margin: 0 4.5%;
@@ -153,13 +163,13 @@ const MapSection = styled(SectionContainer)`
     max-width: 996px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 0 80px;
+    padding: 0 0 56px;
 
     @media ${device.laptop} {
         max-height: unset;
         width: 91%;
         margin: 0 4.5%;
-        padding: 0 0 40px;
+        padding: 0 0 47px;
     }
 `
 const ImageWrapper = styled.div`
@@ -384,9 +394,9 @@ export const LocationLayout = ({ location, images }: LocationLayoutProps) => {
                         align="center"
                         as="h2"
                         size="var(--text-size-header-5)"
-                        mb="4rem"
+                        mb="40px"
                     >
-                        Our office
+                        Picture yourself at Deriv
                     </Header>
                     <StyledFlex>
                         <LeftFlex direction="column" mr="0.8rem" ai="flex-end">

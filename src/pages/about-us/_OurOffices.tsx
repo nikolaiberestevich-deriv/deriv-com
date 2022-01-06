@@ -153,7 +153,7 @@ const OurOffices = () => {
     return (
         <StyledSectionContainer padding="0 16px 120px" background="var(--color-white)">
             <StyledHeader as="h2" size="32px" align="center" type="page-title">
-                {localize('Our global offices')}
+                {localize('Our locations')}
             </StyledHeader>
 
             <Flex>
@@ -319,13 +319,13 @@ const OurOffices = () => {
                     </NumberText>
                 </StyledFlex>
                 <StyledFlex fd="column">
-                    <NumberHeader size="32px">{localize('11')}</NumberHeader>
+                    <NumberHeader size="32px">{localize('13')}</NumberHeader>
                     <NumberText size="20px" align="center">
                         {localize('offices')}
                     </NumberText>
                 </StyledFlex>
                 <StyledFlex fd="column">
-                    <NumberHeader size="32px">{localize('8')}</NumberHeader>
+                    <NumberHeader size="32px">{localize('10')}</NumberHeader>
                     <NumberText size="20px" align="center">
                         {localize('countries')}
                     </NumberText>
